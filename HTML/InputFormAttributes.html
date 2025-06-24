@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Nguyễn Công Quyền-HTML form</title>
+</head>
+<body>
+
+<section>
+  <h1>1. The input <code>form</code> attribute</h1>
+  <p>The form attribute specifies the form an input element belongs to.</p>
+  <form action="/action_page.php" id="form1">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+  <p>The "Last name" field below is outside the form element, but still part of the form.</p>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname" form="form1">
+</section>
+
+<hr>
+
+<section>
+  <h1>2. The input <code>formaction</code> attribute</h1>
+  <p>The formaction attribute specifies the URL of a file that will process the input when the form is submitted.</p>
+  <form action="/action_page.php">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname"><br><br>
+    <input type="submit" value="Submit">
+    <input type="submit" formaction="/action_page2.php" value="Submit as Admin">
+  </form>
+</section>
+
+<hr>
+
+<section>
+  <h1>3. The input <code>formenctype</code> attribute</h1>
+  <p>The formenctype attribute specifies how the form data should be encoded when submitted.</p>
+  <form action="/action_page_binary.asp" method="post">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <input type="submit" value="Submit">
+    <input type="submit" formenctype="multipart/form-data" value="Submit as Multipart/form-data">
+  </form>
+</section>
+
+<hr>
+
+<section>
+  <h1>4. The input <code>formmethod</code> attribute</h1>
+  <p>The formmethod attribute defines the HTTP method for sending form-data to the action URL.</p>
+  <form action="/action_page.php" method="get" target="_blank">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname"><br><br>
+    <input type="submit" value="Submit using GET">
+    <input type="submit" formmethod="post" value="Submit using POST">
+  </form>
+</section>
+
+<hr>
+
+<section>
+  <h1>5. The input <code>formtarget</code> attribute</h1>
+  <p>The formtarget attribute specifies a name or a keyword that indicates where to display the response that is received after submitting the form.</p>
+  <form action="/action_page.php">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname"><br><br>
+    <input type="submit" value="Submit">
+    <input type="submit" formtarget="_blank" value="Submit to a new window/tab">
+  </form>
+</section>
+
+<hr>
+
+<section>
+  <h1>6. The input <code>formnovalidate</code> attribute</h1>
+  <form action="/action_page.php">
+    <label for="email">Enter your email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    <input type="submit" value="Submit">
+    <input type="submit" formnovalidate="formnovalidate" value="Submit without validation">
+  </form>
+</section>
+
+<hr>
+
+<section>
+  <h1>7. The form <code>novalidate</code> attribute</h1>
+  <p>The novalidate attribute specifies that the form data should not be validated when submitted.</p>
+  <form action="/action_page.php" novalidate>
+    <label for="email">Enter your email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    <input type="submit" value="Submit">
+  </form>
+</section>
+
+</body>
+</html>
+

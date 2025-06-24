@@ -1,0 +1,35 @@
+<form action="/submit" method="post">
+    <fieldset>
+      <legend>Person Info</legend>
+      
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+  
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender">
+        <optgroup label="Binary">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </optgroup>
+        <optgroup label="Other">
+          <option value="nonbinary">Non-binary</option>
+          <option value="other">Other</option>
+        </optgroup>
+      </select>
+  
+      <label for="bio">Biography:</label>
+      <textarea id="bio" name="bio" rows="4" cols="40"></textarea>
+  
+      <label for="color">Favorite Color:</label>
+      <input list="colors" id="color" name="color">
+      <datalist id="colors">
+        <option value="Red">
+        <option value="Green">
+        <option value="Blue">
+      </datalist>
+  
+      <output name="result" id="result"></output><br><br>
+      <button type="submit">Submit</button>
+    </fieldset>
+  </form>
+  
