@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nguyễn Công Quyền-PTPMQL</title>
+  <style>
+    section {
+      margin: 30px 0;
+      padding: 20px;
+      border: 1px dashed #ccc;
+    }
+
+ 
+    .outline-offset p {
+      margin: 30px;
+      background: yellow;
+      border: 1px solid black;
+      outline: 1px solid red;
+      outline-offset: 15px;
+    }
+
+
+    .outline-shorthand p.ex1 {outline: dashed;}
+    .outline-shorthand p.ex2 {outline: dotted red;}
+    .outline-shorthand p.ex3 {outline: 5px solid yellow;}
+    .outline-shorthand p.ex4 {outline: thick ridge pink;}
+
+
+    .outline-color p.ex1 {
+      border: 2px solid black;
+      outline-style: solid;
+      outline-color: red;
+    }
+    .outline-color p.ex2 {
+      border: 2px solid black;
+      outline-style: dotted;
+      outline-color: blue;
+    }
+    .outline-color p.ex3 {
+      border: 2px solid black;
+      outline-style: outset;
+      outline-color: grey;
+    }
+
+
+    .outline-width p.ex1 {
+      border: 1px solid black;
+      outline-style: solid;
+      outline-color: red;
+      outline-width: thin;
+    }
+    .outline-width p.ex2 {
+      border: 1px solid black;
+      outline-style: solid;
+      outline-color: red;
+      outline-width: medium;
+    }
+    .outline-width p.ex3 {
+      border: 1px solid black;
+      outline-style: solid;
+      outline-color: red;
+      outline-width: thick;
+    }
+    .outline-width p.ex4 {
+      border: 1px solid black;
+      outline-style: solid;
+      outline-color: red;
+      outline-width: 4px;
+    }
+
+
+    .outline-style p {
+      outline-color: red;
+    }
+
+    .outline-style p.dotted {outline-style: dotted;}
+    .outline-style p.dashed {outline-style: dashed;}
+    .outline-style p.solid {outline-style: solid;}
+    .outline-style p.double {outline-style: double;}
+    .outline-style p.groove {outline-style: groove;}
+    .outline-style p.ridge {outline-style: ridge;}
+    .outline-style p.inset {outline-style: inset;}
+    .outline-style p.outset {outline-style: outset;}
+  </style>
+</head>
+<body>
+
+  <h1>Nguyễn Công Quyền-2121051357</h1>
+
+  <section class="outline-offset">
+    <h2>1. Thuộc tính outline-offset</h2>
+    <p>This paragraph has an outline of 15px outside the border edge.</p>
+  </section>
+
+  <section class="outline-shorthand">
+    <h2>2. Thuộc tính outline (shorthand)</h2>
+    <p class="ex1">A dashed outline.</p>
+    <p class="ex2">A dotted red outline.</p>
+    <p class="ex3">A 5px solid yellow outline.</p>
+    <p class="ex4">A thick ridge pink outline.</p>
+  </section>
+
+  <section class="outline-color">
+    <h2>3. Thuộc tính outline-color</h2>
+    <p>The outline-color property is used to set the color of the outline.</p>
+    <p class="ex1">A solid red outline.</p>
+    <p class="ex2">A dotted blue outline.</p>
+    <p class="ex3">An outset grey outline.</p>
+  </section>
+
+  <section class="outline-width">
+    <h2>4. Thuộc tính outline-width</h2>
+    <p class="ex1">A thin outline.</p>
+    <p class="ex2">A medium outline.</p>
+    <p class="ex3">A thick outline.</p>
+    <p class="ex4">A 4px thick outline.</p>
+  </section>
+
+  <section class="outline-style">
+    <h2>5. Thuộc tính outline-style</h2>
+    <p class="dotted">A dotted outline</p>
+    <p class="dashed">A dashed outline</p>
+    <p class="solid">A solid outline</p>
+    <p class="double">A double outline</p>
+    <p class="groove">A groove outline. The effect depends on the outline-color value.</p>
+    <p class="ridge">A ridge outline. The effect depends on the outline-color value.</p>
+    <p class="inset">An inset outline. The effect depends on the outline-color value.</p>
+    <p class="outset">An outset outline. The effect depends on the outline-color value.</p>
+  </section>
+
+</body>
+</html>

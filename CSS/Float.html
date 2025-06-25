@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Nguyễn Công QUyền-2121051357</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Grid of Boxes */
+    .box {
+      float: left;
+      width: 33.33%;
+      padding: 50px;
+    }
+
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    /* Float with and without clear */
+    .float-example .div1,
+    .float-example .div3 {
+      float: left;
+      padding: 10px;
+      border: 3px solid #73AD21;
+    }
+
+    .float-example .div2 {
+      padding: 10px;
+      border: 3px solid red;
+    }
+
+    .float-example .div4 {
+      padding: 10px;
+      border: 3px solid red;
+      clear: left;
+    }
+
+    /* Float next to each other */
+    .float-row div {
+      float: left;
+      padding: 15px;
+    }
+
+    .float-row .div1 {
+      background: red;
+    }
+
+    .float-row .div2 {
+      background: yellow;
+    }
+
+    .float-row .div3 {
+      background: green;
+    }
+  </style>
+</head>
+<body>
+
+
+  <h2>Grid of Boxes</h2>
+  <p>Float boxes side by side:</p>
+  <div class="clearfix">
+    <div class="box" style="background-color:#bbb">
+      <p>Some text inside the box.</p>
+    </div>
+    <div class="box" style="background-color:#ccc">
+      <p>Some text inside the box.</p>
+    </div>
+    <div class="box" style="background-color:#ddd">
+      <p>Some text inside the box.</p>
+    </div>
+  </div>
+  <p><strong>Note:</strong> Here, we use the clearfix hack to take care of the layout flow. 
+  We also use the box-sizing property to make sure that the box doesn't break due to extra padding. Try to remove this code to see the effect.</p>
+
+  <hr>
+
+
+  <div class="float-example">
+    <h2>Without clear</h2>
+    <div class="div1">div1</div>
+    <div class="div2">div2 - Notice that div2 is after div1 in the HTML code. However, since div1 floats to the left, the text in div2 flows around div1.</div>
+    <br><br>
+
+    <h2>With clear</h2>
+    <div class="div3">div3</div>
+    <div class="div4">div4 - Here, clear: left; moves div4 down below the floating div3. The value "left" clears elements floated to the left. You can also clear "right" and "both".</div>
+  </div>
+
+  <hr>
+
+
+  <h2>Float Next To Each Other</h2>
+  <p>In this example, the three divs will float next to each other.</p>
+  <div class="float-row">
+    <div class="div1">Div 1</div>
+    <div class="div2">Div 2</div>
+    <div class="div3">Div 3</div>
+  </div>
+
+</body>
+</html>

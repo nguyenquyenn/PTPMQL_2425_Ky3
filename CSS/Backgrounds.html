@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Phát Triển Phần Mềm Quản Lý_Nguyễn Công Quyền</title>
+  <style>
+    /* Multiple Backgrounds */
+    .multiple-backgrounds #example1 {
+      background-image: url(img_flwr.gif), url(paper.gif);
+      background-position: right bottom, left top;
+      background-repeat: no-repeat, repeat;
+      padding: 15px;
+    }
+
+    /* Background Size */
+    .background-size #example1 {
+      border: 1px solid black;
+      background: url(img_flwr.gif);
+      background-size: 100px 80px;
+      background-repeat: no-repeat;
+      padding: 15px;
+    }
+
+    .background-size #example2 {
+      border: 1px solid black;
+      background: url(img_flwr.gif);
+      background-repeat: no-repeat;
+      padding: 15px;
+    }
+
+    /*  Multiple Background Layers */
+    .background-layers #example {
+      background: url(img_tree.gif) left top no-repeat,
+                  url(img_flwr.gif) right bottom no-repeat,
+                  url(paper.gif) left top repeat;
+      background-size: auto, auto, cover;
+      padding: 20px;
+      border: 1px solid black;
+    }
+
+    /*  Full Page Background */
+    html.full-bg {
+      background: url(img_man.jpg) no-repeat center fixed;
+      background-size: cover;
+    }
+
+    .full-bg body {
+      color: white;
+    }
+
+    /*  Hero Image */
+    .hero-image {
+      background: url(img_man.jpg) no-repeat center;
+      background-size: cover;
+      height: 500px;
+      position: relative;
+    }
+
+    .hero-text {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+    }
+
+    /*  Background Origin */
+    .background-origin #example1,
+    .background-origin #example2,
+    .background-origin #example3 {
+      border: 10px solid black;
+      padding: 35px;
+      background: url(img_flwr.gif);
+      background-repeat: no-repeat;
+    }
+
+    .background-origin #example2 {
+      background-origin: border-box;
+    }
+
+    .background-origin #example3 {
+      background-origin: content-box;
+    }
+
+    section {
+      border: 2px solid #ccc;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    p {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Nguyễn Công Quyền-2121051357</h1>
+
+  <section class="multiple-backgrounds">
+    <h2>1. Multiple Backgrounds</h2>
+    <p>The following div element has two background images:</p>
+    <div id="example1">
+      <h3>Lorem Ipsum Dolor</h3>
+      <p>Lorem ipsum dolor sit amet...</p>
+    </div>
+  </section>
+
+  <section class="background-size">
+    <h2>2. Background-size Property</h2>
+    <p>Resized background-image:</p>
+    <div id="example1">
+      <h3>Lorem Ipsum Dolor</h3>
+      <p>Lorem ipsum dolor sit amet...</p>
+    </div>
+    <p>Original size of the background-image:</p>
+    <div id="example2">
+      <h3>Lorem Ipsum Dolor</h3>
+      <p>Lorem ipsum dolor sit amet...</p>
+    </div>
+  </section>
+
+  <section class="background-layers">
+    <h2>3. Multiple Background Layers</h2>
+    <div id="example">
+      <h3>Lorem Ipsum Dolor</h3>
+      <p>Lorem ipsum dolor sit amet...</p>
+    </div>
+  </section>
+
+  <section class="full-bg">
+    <h2>4. Full Page Background Image</h2>
+    <p>This section uses the full HTML background image via <code>html</code> selector.</p>
+  </section>
+
+  <section>
+    <h2>5. Hero Image with Centered Text</h2>
+    <div class="hero-image">
+      <div class="hero-text">
+        <h1 style="font-size:50px">I am John Doe</h1>
+        <h3>And I'm a Photographer</h3>
+        <button>Hire me</button>
+      </div>
+    </div>
+    <p>Page content...</p>
+    <p>Note: Resize the browser window to see the responsiveness.</p>
+  </section>
+
+  <section class="background-origin">
+    <h2>6. Background-origin Property</h2>
+    <p>No background-origin (default: padding-box):</p>
+    <div id="example1">
+      <h3>Lorem Ipsum Dolor</h3>
+      <p>Lorem ipsum dolor sit amet...</p>
+    </div>
+
+    <p>background-origin: border-box:</p>
+    <div id="example2">
+      <h3>Lorem Ipsum Dolor</h3>
+      <p>Lorem ipsum dolor sit amet...</p>
+    </div>
+
+    <p>background-origin: content-box:</p>
+    <div id="example3">
+      <h3>Lorem Ipsum Dolor</h3>
+      <p>Lorem ipsum dolor sit amet...</p>
+    </div>
+  </section>
+
+</body>
+</html>
+

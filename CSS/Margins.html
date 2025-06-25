@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nguyễn Công Quyền_PTPMQL</title>
+  <style>
+    section {
+      border: 2px dashed #ccc;
+      padding: 20px;
+      margin: 30px 0;
+    }
+
+    /*  Margin Collapse */
+    .collapse h1 {
+      margin: 0 0 50px 0;
+    }
+
+    .collapse h2 {
+      margin: 20px 0 0 0;
+    }
+
+    /*  margin-left: inherit */
+    .inherit div {
+      border: 1px solid red;
+      margin-left: 100px;
+    }
+
+    .inherit p.ex1 {
+      margin-left: inherit;
+    }
+
+    /*  margin: auto */
+    .auto-center div {
+      width: 300px;
+      margin: auto;
+      border: 1px solid red;
+    }
+
+    /*  margin shorthand (4 values) */
+    .shorthand-4val div {
+      border: 1px solid black;
+      margin: 25px 50px 75px 100px;
+      background-color: lightblue;
+    }
+
+    /* margin individual properties */
+    .individual div {
+      border: 1px solid black;
+      margin-top: 100px;
+      margin-bottom: 100px;
+      margin-right: 150px;
+      margin-left: 80px;
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Nguyễn Công Quyền-2121-51357</h1>
+
+
+  <section class="collapse">
+    <h2>1. Margin Collapse</h2>
+    <p>In this example the h1 element has a bottom margin of 50px and the h2 element has a top margin of 20px. So, the vertical margin between h1 and h2 should have been 70px (50px + 20px). However, due to margin collapse, the actual margin ends up being 50px.</p>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+  </section>
+
+
+  <section class="inherit">
+    <h2>2. Sử dụng margin-left: inherit</h2>
+    <p>Let the left margin be inherited from the parent element:</p>
+    <div>
+      <p class="ex1">This paragraph has an inherited left margin (from the div element).</p>
+    </div>
+  </section>
+
+
+  <section class="auto-center">
+    <h2>3. margin: auto để canh giữa</h2>
+    <p>Bạn có thể dùng <code>margin: auto</code> để căn giữa phần tử ngang theo chiều ngang container.</p>
+    <div>
+      This div will be horizontally centered because it has margin: auto;
+    </div>
+  </section>
+
+
+  <section class="shorthand-4val">
+    <h2>4. margin shorthand với 4 giá trị</h2>
+    <div>This div element has a top margin of 25px, a right margin of 50px, a bottom margin of 75px, and a left margin of 100px.</div>
+  </section>
+
+  
+  <section class="individual">
+    <h2>5. Sử dụng từng thuộc tính margin riêng</h2>
+    <div>This div element has a top margin of 100px, a right margin of 150px, a bottom margin of 100px, and a left margin of 80px.</div>
+  </section>
+
+</body>
+</html>
+
+

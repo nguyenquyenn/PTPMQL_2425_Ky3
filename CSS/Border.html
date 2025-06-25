@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nguyễn Công Quyền-PTPMQL</title>
+  <style>
+    section {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 40px;
+    }
+
+    /* border-radius */
+    .radius p.normal { border: 2px solid red; padding: 5px; }
+    .radius p.round1 { border: 2px solid red; border-radius: 5px; padding: 5px; }
+    .radius p.round2 { border: 2px solid red; border-radius: 8px; padding: 5px; }
+    .radius p.round3 { border: 2px solid red; border-radius: 12px; padding: 5px; }
+
+    /* border shorthand */
+    .shorthand p {
+      border: 5px solid green;
+      padding: 10px;
+    }
+
+    /* border-style individual sides */
+    .sides p {
+      border-top-style: dotted;
+      border-right-style: solid;
+      border-bottom-style: dotted;
+      border-left-style: solid;
+    }
+
+    /*  border-color */
+    .color p.one { border-style: solid; border-color: red; }
+    .color p.two { border-style: solid; border-color: green; }
+    .color p.three { border-style: dotted; border-color: blue; }
+
+    /*  border-width */
+    .width p.one { border-style: solid; border-width: 5px 20px; }
+    .width p.two { border-style: solid; border-width: 20px 5px; }
+    .width p.three { border-style: solid; border-width: 25px 10px 4px 35px; }
+
+    /*  border-style types */
+    .styles p.dotted { border-style: dotted; }
+    .styles p.dashed { border-style: dashed; }
+    .styles p.solid { border-style: solid; }
+    .styles p.double { border-style: double; }
+    .styles p.groove { border-style: groove; }
+    .styles p.ridge { border-style: ridge; }
+    .styles p.inset { border-style: inset; }
+    .styles p.outset { border-style: outset; }
+    .styles p.none { border-style: none; }
+    .styles p.hidden { border-style: hidden; }
+    .styles p.mix { border-style: dotted dashed solid double; }
+
+    .styles p, .color p, .radius p, .width p, .shorthand p {
+      padding: 10px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Nguyễn Công QUyền-2121051357</h1>
+
+  
+  <section class="radius">
+    <h2>1. border-radius Property</h2>
+    <p class="normal">Normal border</p>
+    <p class="round1">Round border</p>
+    <p class="round2">Rounder border</p>
+    <p class="round3">Roundest border</p>
+  </section>
+
+
+  <section class="shorthand">
+    <h2>2. border (Shorthand)</h2>
+    <p>Đây là đoạn văn sử dụng border shorthand.</p>
+  </section>
+
+ 
+  <section class="sides">
+    <h2>3. Individual Border Sides</h2>
+    <p>2 different border styles.</p>
+  </section>
+
+  
+  <section class="color">
+    <h2>4. border-color Property</h2>
+    <p>This property specifies the color of the four borders:</p>
+    <p class="one">A solid red border</p>
+    <p class="two">A solid green border</p>
+    <p class="three">A dotted blue border</p>
+    <p><b>Note:</b> The "border-color" property does not work if it is used alone. Use the "border-style" property to set the borders first.</p>
+  </section>
+
+
+  <section class="width">
+    <h2>5. border-width Property</h2>
+    <p>The border-width property can have from one to four values:</p>
+    <p class="one">Some text.</p>
+    <p class="two">Some text.</p>
+    <p class="three">Some text.</p>
+  </section>
+
+
+  <section class="styles">
+    <h2>6. border-style Property</h2>
+    <p>This property specifies what kind of border to display:</p>
+    <p class="dotted">A dotted border.</p>
+    <p class="dashed">A dashed border.</p>
+    <p class="solid">A solid border.</p>
+    <p class="double">A double border.</p>
+    <p class="groove">A groove border.</p>
+    <p class="ridge">A ridge border.</p>
+    <p class="inset">An inset border.</p>
+    <p class="outset">An outset border.</p>
+    <p class="none">No border.</p>
+    <p class="hidden">A hidden border.</p>
+    <p class="mix">A mixed border.</p>
+  </section>
+
+</body>
+</html>

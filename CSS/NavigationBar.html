@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Nguyễn Công Quyền-2121051357</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+
+    .topnav-container body { margin: 0; }
+
+    ul.topnav {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    ul.topnav li {
+      float: left;
+    }
+
+    ul.topnav li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    ul.topnav li a:hover:not(.active) {
+      background-color: #111;
+    }
+
+    ul.topnav li a.active {
+      background-color: #04AA6D;
+    }
+
+    ul.topnav li.right {
+      float: right;
+    }
+
+    @media screen and (max-width: 600px) {
+      ul.topnav li.right,
+      ul.topnav li {
+        float: none;
+      }
+    }
+
+    .sidenav-container body { margin: 0; }
+
+    .sidenav {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 25%;
+      background-color: #f1f1f1;
+      position: fixed;
+      height: 100%;
+      overflow: auto;
+    }
+
+    .sidenav li a {
+      display: block;
+      color: #000;
+      padding: 8px 16px;
+      text-decoration: none;
+    }
+
+    .sidenav li a.active {
+      background-color: #04AA6D;
+      color: white;
+    }
+
+    .sidenav li a:hover:not(.active) {
+      background-color: #555;
+      color: white;
+    }
+
+    .sidenav-content {
+      margin-left: 25%;
+      padding: 1px 16px;
+      height: 1000px;
+    }
+
+    .basic-menu ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .basic-menu li {
+      margin-bottom: 5px;
+    }
+
+    .basic-menu li a {
+      text-decoration: none;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+
+
+  <section class="topnav-container">
+    <h2>Responsive Topnav Menu</h2>
+    <ul class="topnav">
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="right"><a href="#about">About</a></li>
+    </ul>
+    <div style="padding:0 16px;">
+      <p>This example uses media queries to stack the topnav vertically when the screen size is 600px or less.</p>
+      <p>Resize the browser window to see the effect.</p>
+    </div>
+  </section>
+
+  <hr>
+
+
+  <section class="sidenav-container">
+    <h2>Fixed Side Navigation</h2>
+    <ul class="sidenav">
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <div class="sidenav-content">
+      <h3>Try to scroll this area</h3>
+      <p>Notice that this content area has a left margin of 25% to avoid being overlapped by the fixed sidenav.</p>
+      <p>Scroll down to see how the sidenav sticks to the page.</p>
+      <p>Some text..</p>
+      <p>Some text..</p>
+      <p>Some text..</p>
+      <p>Some text..</p>
+    </div>
+  </section>
+
+  <hr>
+
+
+  <section class="basic-menu">
+    <h2>Basic Vertical Menu</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <p>Note: We use href="#" for test links. In a real web site this would be actual URLs.</p>
+  </section>
+
+</body>
+</html>
