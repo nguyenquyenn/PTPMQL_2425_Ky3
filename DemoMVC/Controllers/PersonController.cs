@@ -9,10 +9,12 @@ namespace DemoMVC.Controllers
     public class PersonController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly AutoGenerateCode _autoGenerateCode;
 
         public PersonController(ApplicationDbContext context)
         {
             _context = context;
+            _autoGenerateCode = new AutoGenerateCode();
         }
 
         public async Task<IActionResult> Index()
@@ -23,6 +25,14 @@ namespace DemoMVC.Controllers
 
         public IActionResult Create()
         {
+            var lastPerson = _context.Person
+                .OrderByDescending(p => p.PersonId)
+                .FirstOrDefault();
+
+            string lastId = lastPerson?.PersonId ?? "PS000"; // fallback nếu chưa có ai
+            string newPersonId = _autoGenerateCode.GenerateCode(lastId);
+
+            ViewBag.newPersonId = newPersonId;
             return View();
         }
 
