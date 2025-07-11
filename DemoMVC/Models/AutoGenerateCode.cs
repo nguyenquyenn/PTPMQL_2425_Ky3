@@ -2,19 +2,22 @@ namespace DemoMVC.Models
 {
     public class AutoGenerateCode
     {
-        public string GenerateCode(string id)
+        public string GenerateCode(string inputID)
         {
-            // 1. Tách phần chữ và số 
-            string prefix = new string(id.TakeWhile(c => !char.IsDigit(c)).ToArray());
-            string numberPart = new string(id.SkipWhile(c => !char.IsDigit(c)).ToArray());
-
-            // 2. Chuyển phần số sang int rồi tăng lên 1
-            int number = int.Parse(numberPart);
-            number++;
-
-            // 3. Ghép lại
-            string newId = prefix + number.ToString("D" + numberPart.Length);
-            return newId;
+            var match = System.Text.RegularExpressions.Regex.Match(inputID, @"^(?<prefix>[A-Za-z]+)(?<number>\d+)$");
+            if (!match.Success)
+            {
+                throw new ArgumentException("Invalid id format");
+            }
+            string prefix = match.Groups["prefix"].Value;
+            
+            string numberPart = match.Groups["number"].Value;
+            
+            int number = int.Parse(numberPart) + 1;
+            
+            string newNumberPart = number.ToString().PadLeft(numberPart.Length, '0');
+            
+            return prefix + newNumberPart;
         }
     }
 }
