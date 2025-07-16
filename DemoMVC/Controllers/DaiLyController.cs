@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DemoMVC.Data;
 using DemoMVC.Models;
+using DemoMVC.Models.ViewModels;
 
 namespace DemoMVC.Controllers
 {
@@ -24,6 +25,19 @@ namespace DemoMVC.Controllers
         {
             var applicationDbContext = _context.DaiLy.Include(d => d.HeThongPhanPhoi);
             return View(await applicationDbContext.ToListAsync());
+        }
+        public async Task<IActionResult> Index2()
+        {
+            var daiLyList = await _context.DaiLy
+                .Include(d => d.HeThongPhanPhoi)
+                .Select(d => new DaiLyVM
+                {
+                    MaDaiLy = d.MaDaiLy,
+                    TenDaiLy = d.TenDaiLy,
+                    TenHTPP = d.HeThongPhanPhoi != null ? d.HeThongPhanPhoi.TenHTPP : "Không có hệ thống phân phối"
+                })
+                .ToListAsync();
+            return View(daiLyList);
         }
 
         // GET: DaiLy/Details/5
@@ -48,7 +62,7 @@ namespace DemoMVC.Controllers
         // GET: DaiLy/Create
         public IActionResult Create()
         {
-            ViewData["MaHTPP"] = new SelectList(_context.Set<HeThongPhanPhoi>(), "MaHTPP", "MaHTPP");
+            ViewData["MaHTPP"] = new SelectList(_context.Set<HeThongPhanPhoi>(), "MaHTPP", "TenHTPP");
             return View();
         }
 

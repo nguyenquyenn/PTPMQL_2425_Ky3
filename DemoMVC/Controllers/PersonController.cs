@@ -141,13 +141,13 @@ namespace DemoMVC.Controllers
         {
             return _context.Person.Any(e => e.PersonId == id);
         }
-        public async Task<IActionResult> Uploads()
+        public async Task<IActionResult> Upload()
         {
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Uploads(IFormFile file)
+        public async Task<IActionResult> Upload(IFormFile file)
         {
             if (file!=null)
             {

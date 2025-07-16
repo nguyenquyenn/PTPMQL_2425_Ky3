@@ -45,7 +45,7 @@ namespace DemoMVC.Migrations
 
                     b.HasIndex("MaHTPP");
 
-                    b.ToTable("DaiLy");
+                    b.ToTable("DaiLy", (string)null);
                 });
 
             modelBuilder.Entity("DemoMVC.Models.HeThongPhanPhoi", b =>
@@ -59,7 +59,7 @@ namespace DemoMVC.Migrations
 
                     b.HasKey("MaHTPP");
 
-                    b.ToTable("HeThongPhanPhoi");
+                    b.ToTable("HeThongPhanPhoi", (string)null);
                 });
 
             modelBuilder.Entity("DemoMVC.Models.Person", b =>
@@ -82,7 +82,7 @@ namespace DemoMVC.Migrations
 
                     b.HasKey("PersonId");
 
-                    b.ToTable("Person");
+                    b.ToTable("Person", (string)null);
 
                     b.HasDiscriminator().HasValue("Person");
 
@@ -103,7 +103,7 @@ namespace DemoMVC.Migrations
 
                     b.HasKey("StudentID");
 
-                    b.ToTable("Students");
+                    b.ToTable("Students", (string)null);
                 });
 
             modelBuilder.Entity("DemoMVC.Models.Employee", b =>
